@@ -51,15 +51,9 @@ img {
 .slide {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-}
-
-.slide:not(:first-of-type) {
     opacity: 0;
+    transition: all 0.7s;
 }
-
-/* .slide img {
-    border-radius: 2%;
-} */
 
 .captions {
     grid-column: 1 / 2;
@@ -70,10 +64,8 @@ img {
 .caption {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-}
-
-.caption:not(:first-of-type) {
     opacity: 0;
+    transition: all 0.7s;
 }
 
 .labels {
@@ -110,19 +102,51 @@ img {
     background-color: gray;
 }
 
-#radio-1:checked ~ .labels li:nth-of-type(1) span {
+#radio-1:checked ~ .slides .slide-1 {
+    opacity: 1;
+}
+#radio-2:checked ~ .slides .slide-2 {
+    opacity: 1;
+}
+#radio-3:checked ~ .slides .slide-3 {
+    opacity: 1;
+}
+#radio-4:checked ~ .slides .slide-4 {
+    opacity: 1;
+}
+#radio-5:checked ~ .slides .slide-5 {
+    opacity: 1;
+}
+
+#radio-1:checked ~ .captions .caption-1 {
+    opacity: 1;
+}
+#radio-2:checked ~ .captions .caption-2 {
+    opacity: 1;
+}
+#radio-3:checked ~ .captions .caption-3 {
+    opacity: 1;
+}
+#radio-4:checked ~ .captions .caption-4 {
+    opacity: 1;
+}
+#radio-5:checked ~ .captions .caption-5 {
+    opacity: 1;
+}
+
+#radio-1:checked ~ .labels .label-1 span {
     background-color: black;
 }
-#radio-2:checked ~ .labels li:nth-of-type(2) span {
+#radio-2:checked ~ .labels .label-2 span {
     background-color: black;
 }
-#radio-3:checked ~ .labels li:nth-of-type(3) span {
+#radio-3:checked ~ .labels .label-3 span {
     background-color: black;
 }
-#radio-4:checked ~ .labels li:nth-of-type(4) span {
+#radio-4:checked ~ .labels .label-4 span {
     background-color: black;
 }
-#radio-5:checked ~ .labels li:nth-of-type(5) span {
+#radio-5:checked ~ .labels .label-5 span {
     background-color: black;
 }
 
